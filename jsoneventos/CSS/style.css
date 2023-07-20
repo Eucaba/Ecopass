@@ -1,0 +1,9 @@
+.container {
+    display: flexbox;
+    align-content: center;
+    background-color: #a2ff86;
+    color: #164b60
+}
+.card {
+    background-color: #4fc0d0;
+}
