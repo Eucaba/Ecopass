@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" src="/frontend/navbar/style.css">
+  <title>Navbar</title>
+</head>
+<body>
+  <header>
+    <div class="wrapper">
+      <div class="burger" onClick="{() => setShowBurgerMenu(!showBurgerMenu)}">
+        
+      </div>
+      <img class="logoContainer" href="../images/Logo.jpg" alt="pictureLogo"></img>
+      <ul class="menu" open="{showBurgerMenu}">
+        <li class="menuItem">
+          <a href="/home" class="menuItemLink">Home</a>
+        </li>
+        <li class="menuItem">
+          <a href="/registrarse" class="menuItemLink">Registrarse</a>
+        </li>
+        <li class="menuItem">
+          <a href="/eventodelmes" class="menuItemLink">Evento del mes</a>
+        </li>
+        <li class="menuItem">
+          <a href="sobreNosotros" class="menuItemLink">Sobre Nosotros</a>
+        </li>
+        <li class="menuItem">
+          <a href="faq" class="menuItemLink">FAQ</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <script>
+   //const [showBurgerMenu, setShowBurgerMenu] = useState(false);
+  </script>
+</body>
+</html>
