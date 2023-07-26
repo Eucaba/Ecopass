@@ -7,3 +7,64 @@
 .card {
     background-color: #4fc0d0;
 }
+
+#previousevents {
+    
+    position: relative;
+    overflow: hidden;
+
+}
+
+ul {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+    height: auto;
+}
+
+
+
+.prev::before,
+.next::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+
+}
+
+.prev::before{
+    left: 10px;
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+.next::after{
+    right: 10px;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+
+
+li{
+    display: inline-block;
+    padding: 20px;
+    
+    margin:20px;
+    background-color: #4fc0d0;
+    
+    
+}
+
+li img{
+    width: 300px;
+    
+}
+
+li h6{
+    text-align: center;
+}
+
+
+
