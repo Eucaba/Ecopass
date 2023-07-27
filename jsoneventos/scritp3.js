@@ -82,8 +82,9 @@
     let evento = events[index]
 
     let card = document.createElement('div')
+    card.classList.add("card-events")
     let cardContent = `
-       <div class="card mb-3" style="max-width: 540px;">
+       <div class="card mb-3 card-events" style="max-width: 540px;">
          <div class="row g-0">
            <div class="col-md-4">
              <img src="${evento.imagen}" class="img-fluid rounded-start" alt="...">
@@ -101,10 +102,12 @@
        `
     card.innerHTML = cardContent
 
+
     if (index >= referencia) {
       div1.appendChild(card)
+      
     } 
-
+    
   }  
 
 })
