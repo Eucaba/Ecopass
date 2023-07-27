@@ -1,4 +1,4 @@
-const jsonEvents = `{
+/*const jsonEvents = `{
   "eventos": [
     {
         "id": 1,
@@ -54,7 +54,7 @@ const jsonEvents = `{
         "ubicacion": "Centro de Artes Escénicas",
         "imagen": "./images/6.Recompensa.jpg"
     }]
-}`
+}`*/
   document.addEventListener("DOMContentLoaded", function () {
 
     
@@ -112,35 +112,67 @@ const jsonEvents = `{
 })
 
 document.addEventListener("DOMContentLoaded", function(){
-  const events = JSON.parse(jsonEvents)
+  fetch('https://018123df-1a58-480a-a0b1-74bef2cb6e76.mock.pstmn.io/api/events')
+    .then((res) => res.json())   
+    .then (events => {    
   const div2 = document.getElementById("previousevents")
-  let referencia = events.eventos.length - 2
+  let referencia = events.length - 2
 
   //crear lista no ordenada
-  let lista = document.createElement("ul")
-  for (let index = 0; index < referencia; index++) {
-    
-    let evento = events.eventos[index]
-    let iLista =  document.createElement("li")
-
-    let imag = document.createElement("img") 
-    imag.src = evento.imagen
-
-    let h5 = document.createElement("h6") 
-    h5.innerHTML = evento.nombre
-
-  iLista.appendChild(imag)
-  iLista.appendChild(h5)
-  lista.appendChild(iLista)
-  div2.appendChild(lista)
-
-  }  
-  let prev = document.createElement("button")
-  prev.classList.add("prev")
-  let next = document.createElement("button")
-  next.classList.add("next")
   
-  div2.appendChild(prev)
-  div2.appendChild(next)
+  const slickTrack = document.getElementById("slick-track")
+  console.log(slickTrack)
+
+  for (let index = 0; index < referencia; index++) {
+    let evento = events[index]
+    let card = document.createElement('div')
+    let divslick = document.createElement('div')
+    divslick.classList.add('slick')
+    
+    let divcard=`
+    
+      <div class="centro">
+          <picture>
+              <img src="${evento.imagen}" alt="">
+          </picture>
+          <h4>${evento.nombre}</h4>
+      </div>
+    </div>
+    `
+    divslick.innerHTML = card
+    divslick.innerHTML = divcard
+    slickTrack.appendChild(divslick)
+  }  
+
+  const slick = document.getElementsByClassName("slick")
+  console.log(slick)
+  const slickW = slick[0].offsetWidth
+  console.log(slickW)
+
+  const botonPrev = document.getElementById("prev")
+  const botonNext = document.getElementById("next")
+  const track = document.getElementById("slick-track")
+  const list = document.getElementById("list")
+
+  botonPrev.onclick = () => moveBy(1);
+  botonNext.onclick = () => moveBy(2);
+
+  function moveBy(value) {
+    const trackW = track.offsetWidth;
+    const listW = list.offsetWidth
+    let leftPosition = parseFloat(track.style.left) || 0
+  
+    if (value === 2){
+      leftPosition = Math.min(leftPosition + slickW, 0)
+    }else if (value === 1){
+      leftPosition = Math.max(leftPosition - slickW, -(trackW - listW))
+    }
+    
+    track.style.left = `${leftPosition}px`
+  }
+
+
 })
+})
+
 
