@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoPass - Registro de usuario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style_registro.css">
+    <script src="registro.js"></script>
+</head>
+<body>
+    <div class="row">
+        <div class="divider"></div>
+    </div>
+    <div class="title"><div class="titlesection"><h1>¡REGÍSTRATE!</h1></div></div>
+    <div class="container">
+        <div class="row">
+            <div class="divider"></div>
+        </div>
+        <div class="row" id="formulario">
+            <div class="box"> 
+                <form id="form" action="/my-handling-form-page" method="post">
+                    <ul>
+                        <li><label for="name">Nombre:</label></li>
+                        <li><input type="text" id="name" name="user_name" required /></li>
+                        <li><label for="birthdate">Fecha de nacimiento:</label></li>
+                        <li><input type="date" name="birthdate" min="2005-01-01" max="2009-12-31" required /></li>
+                        <li><label for="email">Email:</label></li>
+                        <li><input type="email" name="email" required /></li>
+                        <li><label for="phonenumber">Teléfono:</label></li>
+                        <li><input type="tel" name="phonenumber" pattern="[0-9]{9}" required /></li>
+                        <li><label for="password">Contraseña:</label></li>
+                        <li><input type="password" id="pwd1" name="password" minlength="8" maxlength="12" placeholder="Entre 8 y 12 caracteres" required /></li>
+                        <li><label for="passwordconfirmation">Confirmar contraseña:</label></li>
+                        <li><input type="password" id="pwd2" name="password" minlength="8" maxlength="12" placeholder="Entre 8 y 12 caracteres" required /></li>
+                        <li>
+                            <input type="checkbox" id="aceptotérminosycondiciones" />
+                            <label for="aceptotérminosycondiciones">He leído y acepto los <a href="/backup_proyecto/registro/términosycondiciones.html">términos y condiciones de uso</a></label>
+                        </li>
+                        <li><button type="submit" id="button">REGISTRARSE</button></li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </div>    
+</body>
+</html>
