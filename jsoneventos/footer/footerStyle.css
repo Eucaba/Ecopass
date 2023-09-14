@@ -6,9 +6,8 @@
     --oscuro: #164B60;
     --verde: #A2FF86;
     --fondo: #1B6B93;
-    --claro: #4FC0D0;
     /* Tipografía */
-    --tipo-principal: Helvetica, Arial, sans-serif;
+    --tipo-principal: 'Poppins', sans-serif;
     --tipo-secundaria: Verdana;
   }
   
@@ -149,66 +148,44 @@
     -webkit-font-smoothing: antialiased;
     /* opcional */
     -moz-osx-font-smoothing: grayscale;
-    background-color: var(--fondo);
+    height: 100vh;
+    background-color: #1B6B93;
+    display: flex;
+    flex-direction: column;
   }
 
+  /* Código footer */
 
-/* Código Login */
-
-.titleLogin {
-    width: 100%;
-    background-color: #A2FF86;
-    text-align: center;
-    border-bottom: solid 2px black;
-    border-top: solid 2px black;
-    margin-top: 50px;
-    padding: 5px;
-}
-
-.containerFather {
+  .container {
+    background-color: var(--oscuro);
+    margin-top: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
-}
+    padding: 25px;
+  }
 
-.container {
-    margin-top: 10%;
-    background-color: var(--verde);
+  .rrss {
     width: 80%;
     max-width: 500px;
+    padding: 10px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: solid 2px black;
-    border-radius: 10px;
-}
+    justify-content:space-between;
+    font-size: x-large;
+    color: #999999;
+    margin-top: 5px;
+  }
 
-.label{
-    padding: 15px;
-}
+  .contact {
+    color: var(--fondo);
+    font-size: large;
+  }
 
-.forgotPassword {
-    width: 100%;
-    text-align: center;
-    color: var(--claro);
-    font-size: small;
-}
+  .iconsRrss {
+    cursor: pointer;
+  }
 
-.buttonSend {
-    margin: auto;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    background-color: var(--claro);
-    width: 70px;
-    padding: 5px;
-}
-
-.input {
-    background-color: var(--fondo);
-    width: 95%;
-    margin: auto;
-    padding: 5px;
-    color: white;
-}
-
+  .iconsRrss:hover {
+    color: var(--fondo);
+    transform: scale(2);
+  }
