@@ -9,11 +9,11 @@
 }
 
 .container {
-    background-color: #164b60;
+    background-color: #1B6B93;
 }
 
 .divider {
-    background-color: #164b60;
+    background-color: #1B6B93;
     padding: 5%; 
 }
 
@@ -28,6 +28,11 @@
     width: 100%;
     margin-right: 0% !important;
     margin-left: 0% !important;
+    font-weight: bolder;
+}
+
+.question {
+    font-weight: bold;
 }
 
 @media screen and (min-width: 992px) {

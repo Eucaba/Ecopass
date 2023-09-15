@@ -47,7 +47,7 @@ window.addEventListener("DOMContentLoaded", function () {
         let box = document.createElement('div')
         let boxContent = `
             <div class="box">
-            <p class="question"><b>${pregunta.pregunta}</b></p>
+            <p class="question">${pregunta.pregunta}</p>
             <p class="answer">${pregunta.respuesta}</p>
             </div>
             `
