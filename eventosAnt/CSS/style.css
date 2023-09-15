@@ -1,0 +1,164 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #1B6B93;
+}
+
+.container {
+    margin-top: 100px;
+}
+
+.card {
+    background-color: #a2ff86;
+    border: 4px solid black
+    
+} 
+
+img.img-fluid.rounded-start {
+    width: 80%;
+    height: auto;
+    margin: 30px;
+}
+
+.card-events {
+    display: flex !important; 
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: column;
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+div.col-md-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.col-md-8 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0%;
+    
+}
+
+.card-text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0%;
+    margin-bottom: 10px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    color: hsl(0, 0%, 100%);
+    padding: 0;
+    font-size: 4em;
+}
+
+/*Galery*/
+
+
+#galery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    margin: 100px;
+    
+}
+
+.card-events-galery {
+    height: 300px; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+
+}
+
+img.image-galery {
+    width: 350px; 
+    height: 250px;
+    margin: 0%; /* Centra la imagen verticalmente en la tarjeta */
+}
+
+.div-image {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+
+    .container {
+        margin: 0 auto;
+        margin-top: 100px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    #galery {
+        width: 100%;
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        place-items: center;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px; 
+        margin: 0%;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        
+    }
+
+    .card-galery {
+        width: 100%;
+        height: 200px;
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .div-image {
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+    }
+
+    img.image-galery {
+        width: 160px; 
+        height: 160px;
+        margin: 0%; /* Centra la imagen verticalmente en la tarjeta */
+        border: 4px solid black
+    }
+
+    #cardg {
+        height: 160px;
+        background-color: transparent;
+        border: none;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+    
+
+    
+
+}
