@@ -8,12 +8,15 @@
     text-align: justify;
 }
 
+body {
+    background-color: #1B6B93;
+}
 .container {
-    background-color: #164b60;
+    background-color: #1B6B93;
 }
 
 .divider {
-    background-color: #164b60;
+    background-color: #1B6B93;
     padding: 5%; 
 }
 
@@ -22,6 +25,7 @@
     text-align: center;
     padding-top: 5%;
     padding-bottom: 5%;
+    font-weight: bolder;
 }
 
 .title {
