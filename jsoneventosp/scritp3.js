@@ -59,6 +59,7 @@
 
     
   const div1 = document.getElementById("newestevents")
+  const div12 = document.getElementById("upcomingevent")
 
   ///utilizamos el fetch (función) para pedir la información a la url
   fetch('https://018123df-1a58-480a-a0b1-74bef2cb6e76.mock.pstmn.io/api/events')
@@ -67,17 +68,9 @@
   
   //proporcionamos el JSON pegándolo directamente
   //const events = JSON.parse(jsonEvents)
-  //parseamos el JSON a un array de eventos
-    console.log(events)
+  //parseamos el JSON a un array de eventos 
   
-  //puntos de anclaje de los elementos que se aurogenerarán para mostrar los eventos
-
-  let referencia = events.length - 2
-  //punto de corte para diferenciar eventos antiguos o actuales y nuevos
-  //la PK tiene AI, por lo que los 2 últimos elementos del array siempre serán evento actual y próximo evento
-  //importante: para que funcione, los próximos eventos se añaden 1 cada vez (si cargamos todos los eventos del año a la vez, esta lógica no sirve)
-  //Cuando se realiza el actual pasa a previous, el siguiente a actual, y se añade el siguiente próximo evento
-
+  //recorrer el array y generar las tarjetas
   for (let index = 0; index < events.length; index++) {
     let evento = events[index]
 
@@ -91,7 +84,7 @@
            </div>
            <div class="col-md-8">
              <div class="card-body">
-               <h5 class="card-title"> ${evento.nombre} </h5>
+               <h5 class="card-title"><strong> ${evento.nombre} </strong></h5>
                <p class="card-text">${evento.descripcion}</p>
                <p class="card-text"><small class="text-body-secondary">${evento.ubicacion}</small></p>
                <p class="card-text"><small class="text-body-secondary">${evento.fecha}</small></p>
@@ -101,56 +94,64 @@
        </div>
        `
     card.innerHTML = cardContent
-
-
-    if (index >= referencia) {
-      div1.appendChild(card)
-      
-    } 
     
+    
+        
+    //se agrega el evento actual al div correspondiente
+    if (evento.tipo == "evento actual") {
+      div1.appendChild(card)
+         
+    } 
+
+    
+
+    
+
+    //se agrega el proximo evento al div correspondiente
+    if (evento.tipo == "evento proximo") {
+      div12.appendChild(card)
+      
+    }
+
+
   }  
 
-})
-
-})
-
-document.addEventListener("DOMContentLoaded", function(){
-  fetch('https://018123df-1a58-480a-a0b1-74bef2cb6e76.mock.pstmn.io/api/events')
-    .then((res) => res.json())   
-    .then (events => {    
+  //carrousel
   const div2 = document.getElementById("previousevents")
-  let referencia = events.length - 2
-
+  
   //crear lista no ordenada
   
   const slickTrack = document.getElementById("slick-track")
-  console.log(slickTrack)
-
-  for (let index = 0; index < referencia; index++) {
+  
+  for (let index = 0; index < events.length; index++) {
     let evento = events[index]
     let card = document.createElement('div')
     let divslick = document.createElement('div')
     divslick.classList.add('slick')
-    
+    //se genera cada tarjeta
     let divcard=`
     
       <div class="centro">
           <picture>
               <img src="${evento.imagen}" alt="">
           </picture>
-          <h4>${evento.nombre}</h4>
+          <h4><strong>${evento.nombre}</strong></h4>
       </div>
     </div>
     `
     divslick.innerHTML = card
     divslick.innerHTML = divcard
-    slickTrack.appendChild(divslick)
+
+    if (evento.tipo == "evento anterior") {
+      slickTrack.appendChild(divslick)
+    }
+
+    
   }  
 
   const slick = document.getElementsByClassName("slick")
-  console.log(slick)
   const slickW = slick[0].offsetWidth
-  console.log(slickW)
+  
 
   const botonPrev = document.getElementById("prev")
   const botonNext = document.getElementById("next")
@@ -174,8 +175,15 @@ document.addEventListener("DOMContentLoaded", function(){
     track.style.left = `${leftPosition}px`
   }
 
+  
+})
 
 })
-})
+
+
+
+
+
+
 
 
