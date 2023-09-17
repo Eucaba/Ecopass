@@ -85,6 +85,10 @@ body {
     background-color: #a2ff86;
     font-weight: bold;
     padding: 10px 20px 10px 20px;
+    margin: 0 auto; /*margen izq y derecho igual a 0 en ppio y el navegador lo centra,
+    solo fuciona con block*/
+    display: block; /*elementos block ocupan todo el ancho disponible y se muestran
+    en "su propia línea"*/
 }
 
 @media screen and (min-width: 992px) {
