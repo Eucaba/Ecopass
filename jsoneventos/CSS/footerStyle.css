@@ -1,0 +1,37 @@
+
+
+  /* Código footer */
+
+  .containerf {
+    background-color: var(--oscuro);
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+  }
+
+  .rrss {
+    width: 80%;
+    max-width: 500px;
+    padding: 10px;
+    display: flex;
+    justify-content:space-between;
+    font-size: x-large;
+    color: #999999;
+    margin-top: 5px;
+  }
+
+  .contact {
+    color: var(--fondo);
+    font-size: large;
+  }
+
+  .iconsRrss {
+    cursor: pointer;
+  }
+
+  .iconsRrss:hover {
+    color: var(--fondo);
+    transform: scale(2);
+  }
