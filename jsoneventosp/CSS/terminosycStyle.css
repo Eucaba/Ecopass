@@ -36,6 +36,11 @@ body {
     font-weight: bolder;
 }
 
+.titlesection h1 {
+    font-weight: bolder;
+    font-size: 138.5%;
+}
+
 @media screen and (min-width: 992px) {
     .box {
         border: 3px solid black;

@@ -45,6 +45,11 @@ body {
     font-weight: bolder;
 }
 
+.titlesection h1 {
+    font-weight: bolder;
+    font-size: 138.5%;
+}
+
 label a:link {
     font-weight: bold;
     color: #164b60;
