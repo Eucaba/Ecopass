@@ -12,11 +12,12 @@ body {
 
 h3 {
     margin: 5px 0;
-    font-weight: bold;
+    font-weight: bold !important;
 }
 
 #frase {
     font-style: italic;
+    margin: 5px;
 }
 
 .container {
@@ -57,7 +58,7 @@ h3 {
 }
 
 .card-container .usuario:hover{
-    border: 3px solid #164b60;
+    border: 3px solid #4FC0D0;
 }
 
 
@@ -87,7 +88,7 @@ h3 {
 }
 
 .foto:hover{
-    border: 3px solid #A2FF86;
+    border: 3px solid  #4FC0D0;
 
 }
 
@@ -99,5 +100,4 @@ h3 {
 
 .foto #camara-icon {
     position: absolute !important;
-    fill: #164b60;
 }
