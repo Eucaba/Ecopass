@@ -1,0 +1,137 @@
+body{
+    background-color: #1B6B93;
+    font-family: 'Poppins', sans-serif;
+
+}
+h1{font-size: 3em;}
+
+.container{
+    padding: 3%;
+    border: solid black 2px;
+    border-radius: 2%;
+    background-color: #a2ff86;
+    color: #164b60;
+    
+}
+
+#formulario{
+    margin-left: 20%;
+
+}
+
+:is(input, textarea){
+    background-color: #1B6B93;
+    border: 0px;
+    color: white;
+    
+}
+
+#avatar{
+    display: none;
+}
+#perfil{
+    width: 170px;
+    
+}
+#files{
+    display: flexbox;
+    float: right;
+    margin-right: 35%;
+    
+}
+#avatar1{
+    background-color: #1B6B93;
+    color: #ffffff;
+    text-align: center;
+
+}
+#botones{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+#titulo{
+    background-color: #a2ff86;
+    height: 80px;
+    text-align: center;
+    color: #1B6B93;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+#guardar, #cancelar{
+    background-color: #a2ff86;
+    border: none;
+    color: #1B6B93;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 50px;
+    width: 250px;
+    cursor: pointer;
+}
+#guardar:hover {
+    box-shadow: 0 4px 16px rgb(255, 255, 255);
+    transition: all 0.2s ease;
+}
+#cancelar:hover {
+    box-shadow: 0 4px 16px rgb(255, 255, 255);
+    transition: all 0.2s ease;
+}
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+
+
+    #formulario{
+        display: flexbox;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        margin-left: 0%;
+    }
+    .text{
+        width: 100%;
+    }
+    .container{
+        border-radius: 20px;
+        margin-left: 1.5%;
+        
+    }
+    h1{
+        font-size: 2em;
+        
+    }
+    #botones{
+        display: flexbox;
+        justify-content: center;
+        margin: 10px;
+    }
+
+
+    #guardar, #cancelar{
+        background-color: #a2ff86;
+        border: none;
+        color: #1B6B93;
+        padding: 5px 22px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 2px 25px;
+        width: 150px;
+        cursor: pointer;
+    }
+
+    #files{
+        margin-left: 25%;
+        
+        
+    }
+
+
+  }
